@@ -1,0 +1,79 @@
+<nav class="navbar is-warning" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <h1 class="title is-4">NaijaProperty</h1>
+        </a>
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+            <div class="navbar-item">
+                <%= form_tag root_path, method: :get do %>
+                    <div class="field has-addons <%= 'is-hidden' if current_page?(root_path) %>">
+                        <div class="control has-icons-left">
+                            <span class="icon is-small is-left">
+                                <i class="fa fa-search"></i>
+                            </span>
+                            <%= text_field_tag 'q', '', class: "input", placeholder: "Try 'logo design" %>
+                        </div>
+                        <div class="control">
+                            <button class="button is-danger" type="submit">Search</button>
+                        </div>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+
+        <div class="navbar-end">
+            <%= link_to 'Trends', root_path, class: "navbar-item" %>
+            <%= link_to 'Post a Listing', root_path, class: "navbar-item" %>
+            <%= link_to 'Browse Property', root_path, class: "navbar-item" %>
+
+            <% if (!agent_signed_in?) %>
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <%= link_to  "Sign Up", new_agent_registration_path, class: "button is-primary" %>
+                        <%= link_to  "Login", new_agent_session_path, class: "button is-light" %>
+                    </div>
+                </div>
+            <% else %>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link">
+                        <figure class="image is-24x24 m-r-5 avatar <%= current_agent.status ? "online" : "offline" %>">
+                            <%#= image_tag avatar_url(current_agent), class: "is-rounded" %>
+                        </figure>
+                        <%= current_agent.fullname %>
+                    </a>
+
+                    <div class="navbar-dropdown">
+                        <%= link_to  "Profile", edit_agent_registration_path, class: "navbar-item" %>
+                        <%= link_to 'Dashboard', dashboard_path, class: "navbar-item" %>
+                        <hr class="navbar-divider">
+                        <%= link_to  "Log out", destroy_agent_session_path, method: :delete, class: "navbar-item" %>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</nav>
+
+
+<script>
+$(document).ready(function() {
+
+  // Check for click events on the navbar burger icon
+  $(".navbar-burger").click(function() {
+
+      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+      $(".navbar-burger").toggleClass("is-active");
+      $(".navbar-menu").toggleClass("is-active");
+
+  });
+});
+</script>
