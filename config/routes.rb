@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
-  get '/dashboard', to: 'agents#dashboard'
   root 'pages#home'
 
+  get '/dashboard', to: 'agents#dashboard'
+  
   devise_for :agents, path: '', 
               path_names: {sign_up: 'signup', sign_in: 'login', edit: 'update', sign_out: 'logout'},
               controllers: {registrations: 'registrations'}

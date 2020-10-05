@@ -1,0 +1,43 @@
+class AddPropertyFeaturesToProperty < ActiveRecord::Migration[6.0]
+  def change
+    add_column :properties, :basement, :boolean
+    add_column :properties, :centralair, :boolean
+    add_column :properties, :dinning_room, :boolean
+    add_column :properties, :walldrobe, :boolean
+    add_column :properties, :familyroom, :boolean
+    add_column :properties, :guest_toilet, :boolean
+    add_column :properties, :laundry_room, :boolean
+    add_column :properties, :disability, :boolean
+    add_column :properties, :fireplace, :boolean
+    add_column :properties, :main_floor, :boolean
+    add_column :properties, :pantry, :boolean
+    add_column :properties, :access_gate, :boolean
+    add_column :properties, :balcony, :boolean
+    add_column :properties, :fence, :boolean
+    add_column :properties, :pool, :boolean
+    add_column :properties, :staff_quarters, :boolean
+    add_column :properties, :water_front, :boolean
+    add_column :properties, :city_light, :boolean
+    add_column :properties, :mountain_view, :boolean
+    add_column :properties, :river_view, :boolean
+    add_column :properties, :water_view, :boolean
+    add_column :properties, :ocean_view, :boolean
+    add_column :properties, :fitness_center, :boolean
+    add_column :properties, :security_post, :boolean
+    add_column :properties, :tennis_court, :boolean
+    add_column :properties, :basketball_court, :boolean
+    add_column :properties, :pet_allowed, :boolean
+    add_column :properties, :recreation_facilities, :boolean
+    add_column :properties, :electric_fencing, :boolean
+    add_column :properties, :cable_tv, :boolean
+    add_column :properties, :borehole, :boolean
+    add_column :properties, :alarm, :boolean
+    add_column :properties, :senior_community, :boolean
+    add_column :properties, :surface_lot, :boolean
+    add_column :properties, :covered, :boolean
+    add_column :properties, :street_parking, :boolean
+    add_column :properties, :garage, :boolean
+    add_column :properties, :other_parking, :boolean
+    add_column :properties, :swimming_pool, :string
+  end
+end
