@@ -1,0 +1,15 @@
+@import "base";
+
+@mixin npDisplay {
+    padding: 0 1rem;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+@mixin npAlign {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+}

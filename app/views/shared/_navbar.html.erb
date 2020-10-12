@@ -1,0 +1,157 @@
+<!-- main navbar  -->
+<section class="menu">
+    <input type="checkbox" class="checkbox input_check" id="click" hidden>
+    <nav class="navbar">
+        <div class="navbar__left">
+            <label for="click">
+                <div class="navbar__left--icon">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                </div>
+            </label>
+            <div class="navbar__left--logo">NaijaProperty.com</div>
+            <%= link_to 'For Sale', root_path, class: "navbar__left--link navbar__left--item navbar__hidden" %>
+            <%= link_to 'For Rent', root_path, class: "navbar__left--link navbar__hidden" %>
+            <%= link_to 'Find an Agent', root_path, class: "navbar__left--link navbar__hidden" %>
+        </div>
+
+        <div class="navbar__middle">NaijaProperty.com</div>
+    
+        <div class="navbar__right">
+            <%= link_to 'Add a Property', root_path, class: "navbar__right--link navbar__hidden" %>
+            <%= link_to 'Request', root_path, class: "navbar__right--link navbar__hidden" %>
+            <%#= link_to 'Sign in', root_path, class: "navbar__right--link navbar__hidden" %>
+            <%= link_to 'Sign up', root_path, class: "navbar__right--link navbar__hidden" %>
+            
+            <%#= link_to 'Add a Property', root_path, class: "navbar__right--link navbar__right--add-property" %>
+            
+            <%= link_to root_path, class: "navbar__right--link navbar__right--add-property" do %>
+                    <%= inline_svg_tag "user.svg", class: "navbar__right--icon", left: true %>
+                    <span>Log In</span>
+            <% end %>  
+                
+         </div>   
+    </nav>
+    <!-- end of main navbar  -->    
+    <%# Side Navigation %>
+
+    <nav class="sidebar">
+        <div class="sidebar__header">
+            <label for="click">
+                <div class="navbar__left--icon">
+                    <div class="line line-1"></div>
+                    <div class="line line-2"></div>
+                    <div class="line line-3"></div>
+                </div>
+                
+            </label>
+            <div class="sidebar__text">Menu</div>
+        </div>
+        <div class="sidebar__login">
+            <%= link_to root_path, class: "navbar__right--link " do %>
+                    <%= inline_svg_tag "user.svg", class: "navbar__right--icon", left: true %>
+                    <span>Log In</span>
+            <% end %>  
+            <%= link_to root_path, class: "navbar__right--link" do %>
+                    <%= inline_svg_tag "user.svg", class: "navbar__right--icon", left: true %>
+                    <span>Create Account</span>
+            <% end %>
+
+            <%# <form class="navigation-search">
+                <input type="text" class="navigation-search-input" placeholder="Search...">
+                <button class="navigation-search-btn">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form> %>
+        </div>
+    
+
+        <%# <ul class="navigation-list">
+            <li class="navigation-item">
+                <a href="#" class="navigation-link">home</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#" class="navigation-link">about us</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#" class="navigation-link">rooms</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#" class="navigation-link">events</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#" class="navigation-link">customers</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#" class="navigation-link">contact</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#" class="navigation-link">home</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#" class="navigation-link">about us</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#" class="navigation-link">rooms</a>
+            </li>
+            <li class="navigation-item">
+                <a href="#" class="navigation-link">events</a>
+            </li>
+        </ul> %>
+
+        <div class="sidebar__list">
+            <ul class="sidebar__list--nav">
+
+                <%# <li class="sidebar__list--nav__item sidebar__list--nav__item--active">
+                    <%= link_to root_path, class: 'sidebar__list--nav__link' do %>
+                            <%#= fa_icon "envelope", text: "naijaProperty", class: "sidebar__list--nav__icon", left: true %>
+                        <%# end %>  
+                <%# </li> %>
+                <%# sidebar__list--nav__item--active %>
+                <li class="sidebar__list--nav__item sidebar__list--nav__item--active ">
+                    <%= link_to root_path, class: 'sidebar__list--nav__link' do %>
+                            <%= inline_svg_tag "sale.svg", class: "sidebar__list--nav__icon", left: true %>
+                            <span>For Sale</span>
+                        <% end %>  
+                </li>
+                <li class="sidebar__list--nav__item">
+                    <%= link_to root_path, class: 'sidebar__list--nav__link' do %>
+                            <%= inline_svg_tag "rent.svg", class: "sidebar__list--nav__icon", left: true %>
+                            <span>For Rent</span>
+                        <% end %>  
+                </li>
+                <li class="sidebar__list--nav__item">
+                    <%= link_to root_path, class: 'sidebar__list--nav__link' do %>
+                            <%= inline_svg_tag "home3.svg", class: "sidebar__list--nav__icon", left: true %>
+                            <span>Short-Stay</span>
+                        <% end %>  
+                </li>
+                <li class="sidebar__list--nav__item">
+                    <%= link_to root_path, class: 'sidebar__list--nav__link' do %>
+                            <%= inline_svg_tag "home3.svg", class: "sidebar__list--nav__icon", left: true %>
+                            <span>Find an Agent</span>
+                        <% end %>  
+                </li>
+                <li class="sidebar__list--nav__item">
+                    <%= link_to root_path, class: 'sidebar__list--nav__link' do %>
+                            <%= inline_svg_tag "home3.svg", class: "sidebar__list--nav__icon", left: true %>
+                            <span>Add a Property</span>
+                        <% end %>  
+                </li>
+                <li class="sidebar__list--nav__item">
+                    <%= link_to root_path, class: 'sidebar__list--nav__link' do %>
+                            <%= inline_svg_tag "home3.svg", class: "sidebar__list--nav__icon", left: true %>
+                            <span>Property</span>
+                        <% end %>  
+                </li>           
+            </ul>
+
+            <div class="sidebar__list--copyright">
+                &copy; 2020. NaijaProperty.Com. <br>All Rights Reserved
+            </div>
+        </div>        
+    </nav>
+    <!-- end of navigation -->
+</section>
+    

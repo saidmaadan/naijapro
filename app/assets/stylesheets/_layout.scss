@@ -1,0 +1,28 @@
+@import 'base';
+
+.header{
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    display: grid;
+    
+}
+.main{
+    margin-top: 70px;
+    grid-column: full-start/full-end;
+    grid-row: 2/3;
+    display: grid;
+    //grid-template-rows: min-content min-content min-content;
+    grid-template-columns: [main-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [main-end]; 
+}
+.ms-footer{
+    grid-column: full-start/full-end;
+    grid-row: 3/-1;
+    bottom: 0;
+    display: grid;
+    align-content: end;
+    background-color: $color-grey;
+    background-size: cover;
+    background-position: top;
+    object-fit: cover;
+    
+}

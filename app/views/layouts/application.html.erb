@@ -10,9 +10,12 @@
     <%#= favicon_link_tag asset_path('favicon.ico') %>
   </head>
 
-  <body>
-    <%= render  "shared/header" %>
+  <body class='ms-container'>
+    <%= render  "shared/navbar" %>
     <%= render 'shared/notifications' %>
-    <%= yield %>
+    <div class="main">
+      <%= yield %>
+    </div>
+    <%= render  "shared/footer" %>
   </body>
 </html>
