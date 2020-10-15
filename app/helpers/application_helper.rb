@@ -1,24 +1,4 @@
 module ApplicationHelper
-   
-    # def resource_name
-    #   :agent
-    # end
-    # helper_method :resource_name
-   
-    # def resource
-    #   @resource ||= Agent.new
-    # end
-    # helper_method :resource
-   
-    # def devise_mapping
-    #   @devise_mapping ||= Devise.mappings[:agent]
-    # end
-    # helper_method :devise_mapping
-   
-    # def resource_class
-    #   Agent
-    # end
-    # helper_method :resource_class
 
     def inline_svg_tag filename, options={}
         file = File.read(Rails.root.join('app', 'assets', 'images', 'svg', filename))
