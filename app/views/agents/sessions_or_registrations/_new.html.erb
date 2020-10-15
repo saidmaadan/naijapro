@@ -1,0 +1,45 @@
+<input type="checkbox" id="show-hide-forms" hidden>
+<div class="forms-wrapper">
+    <label for="show-hide-forms" class="x-btn">&#10005;</label>
+    <input type="checkbox" id="show-form" hidden>
+    <div class="show-form--heading">
+        <h2>Welcome to naijaproperty</h2>
+    </div>
+    <div class="show-btns-wrapper">
+        <label for="show-form" class="show-form-btn show-signup-form">Sign Up</label>
+        <label for="show-form" class="show-form-btn show-login-form">Log In</label>
+    </div>
+
+    <%= form_for(:agent, class: "signup-form", :url => registration_path(:agent)) do |f| %>
+        <h3 class="form-heading">Sign Up</h3>
+        <%= render "devise/shared/error_messages", resource: resource %>
+        <div class="fullname-imputs-wrapper">
+            <%= f.text_field :fullname, autofocus: true, autocomplete: "full_name", placeholder: "Full name" %>
+            <%= f.text_field :username, autofocus: true, autocomplete: "username", placeholder: "Username" %>
+        </div>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-input", placeholder: "Enter your email" %>
+        <% if @minimum_password_length %>
+            <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %>
+        <%= f.password_field :password, autocomplete: "new-password", class: "form-input", placeholder: "Password" %>
+        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-input", placeholder: "Password" %>
+        <%= f.submit "Sign up", class: "form-btn" %>
+    <% end %>
+        
+    <%= form_for(:agent, class: "login-form", :url => session_path(:agent)) do |f| %>
+        <h3 class="form-heading">Log In</h3>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-input", placeholder: "Email Address" %>
+        <%= f.password_field :password, autocomplete: "current-password", class: "form-input", placeholder: "Email Address" %>
+    
+        <% if devise_mapping.rememberable? %>
+            <div class="field">
+                <%= f.check_box :remember_me %>
+                <%= f.label :remember_me %>
+            </div>
+        <% end %>
+        <%= f.submit "Log in", class: "form-btn" %>
+    <% end %>
+            
+    <%#= render "devise/shared/links" %>
+
+</div>

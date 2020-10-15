@@ -10,12 +10,18 @@
     <%#= favicon_link_tag asset_path('favicon.ico') %>
   </head>
 
-  <body class='ms-container'>
-    <%= render  "shared/navbar" %>
-    <%= render 'shared/notifications' %>
-    <div class="main">
-      <%= yield %>
+  <body >
+    <%#= render "shared/signin" %>
+    
+    <%#= render "devise/sessions/form" %>
+    <div class="ms-container">
+      <%#= render "agents/sessions_or_registrations/form" %>
+      <%= render  "shared/navbar" %>
+      <%= render 'shared/notifications' %>
+      <div class="main">
+        <%= yield %>
+      </div>
+      <%= render  "shared/footer" %>
     </div>
-    <%= render  "shared/footer" %>
   </body>
 </html>

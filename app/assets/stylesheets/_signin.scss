@@ -1,0 +1,149 @@
+@import "base";
+
+/* Modal Box */
+
+.forms-wrapper{
+    grid-column: full-start/full-end;
+    background-color: #eee;
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    z-index: 1000;
+    padding: 2rem;
+    border: 2rem solid #eee;
+    border-radius: .3rem;
+    -webkit-border-radius: .3rem;
+    -moz-border-radius: .3rem;
+    -ms-border-radius: .3rem;
+    -o-border-radius: .3rem;
+    display: none;
+}
+.show-form--heading{
+    display: flex;
+    width: 100%;
+    margin: 2rem auto;
+    font-size: 3rem;
+    justify-content: center;
+    text-align: center;
+}
+.show-btns-wrapper{
+    display: flex;
+    padding: 1rem;
+}
+.show-form-btn{
+    flex: 0 1 50%;
+    background-color: $color-primary;
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+    border: .1rem solid #eee;
+    cursor: pointer;
+}
+.form-heading{
+    font-size: 2rem;
+    color: $color-primary;
+    text-transform: uppercase;
+    padding: 1rem 0 0 .2rem;
+}
+.forms-wrapper form{
+    width: 50rem;
+    padding: 1rem;
+}
+.forms-wrapper form input:not(.form-btn){
+    background-color: #fff;
+    color: #777;
+    padding: 1.3rem;
+    margin: .3rem 0;
+    border: .2rem solid #eee;
+    box-sizing: border-box;
+    outline: none;
+}
+.fullname-inputs-wrapper{
+    display: flex;
+}
+.fullname-imputs-wrapper input{
+    width: 49.6%;
+}
+.form-input{
+    width: 100%;
+}
+.form-btn{
+    width: 35%;
+    background-color: $color-red;
+    color: #fff;
+    letter-spacing: .3rem;
+    padding: 1rem;
+    border: none;
+    margin-top: .5rem;
+}
+.x-btn{
+    font-size: 2rem;
+    color: $color-primary;
+    font-weight: bolder;
+    position: absolute;
+    bottom: 3.3rem;
+    right: 3.3rem;
+    cursor: pointer;
+}
+.login-form{
+    display: none;
+}
+.show-signup-form{
+    color: #888;
+    background-color: $color-primary-lighter;
+    pointer-events: none;
+}
+#show-form:checked ~ .show-btns-wrapper .show-login-form{
+    color: #888;
+    background-color: $color-primary-lighter;
+    pointer-events: none;
+}
+#show-form:checked ~ .show-btns-wrapper .show-signup-form{
+    color: #fff;
+    background-color: $color-primary;
+    pointer-events: initial;
+}
+#show-form:checked ~ .signup-form{
+    display: none;
+}
+#show-form:checked ~ .login-form{
+    display: block;
+    
+}
+#show-hide-forms:checked ~ .forms-wrapper{
+    display: block;
+    animation: anim .50s;
+    -webkit-animation: anim .50s;
+}
+#show-hide-forms:checked ~ .ms-container{
+    pointer-events: none;
+    opacity: .2;
+}
+.first-nav-link label{
+    cursor: pointer;
+}
+@keyframes anim{
+    0%{
+        left: 40%;
+    }
+    50%{
+        left: 60%;
+    }
+    75%{
+        left: 45%;
+    }
+    100%{
+        left: 50%;
+    }
+}
+
+/* Modal Box */
+

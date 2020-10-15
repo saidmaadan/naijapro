@@ -21,17 +21,16 @@
         <div class="navbar__right">
             <%= link_to 'Add a Property', root_path, class: "navbar__right--link navbar__hidden" %>
             <%= link_to 'Request', root_path, class: "navbar__right--link navbar__hidden" %>
-            <%#= link_to 'Sign in', root_path, class: "navbar__right--link navbar__hidden" %>
-            <%= link_to 'Sign up', root_path, class: "navbar__right--link navbar__hidden" %>
-            
-            <%#= link_to 'Add a Property', root_path, class: "navbar__right--link navbar__right--add-property" %>
-            
-            <%= link_to root_path, class: "navbar__right--link navbar__right--add-property" do %>
-                    <%= inline_svg_tag "user.svg", class: "navbar__right--icon", left: true %>
-                    <span>Log In</span>
-            <% end %>  
-                
-         </div>   
+            <% if (agent_signed_in?)%>
+                <%= link_to  "Log out", destroy_agent_session_path, method: :delete, class: "sidebar__list--nav__link navbar__hidden" %>
+            <% else %>
+                <%= link_to 'Sign up', root_path, class: "navbar__right--link navbar__hidden" %>
+                <%= link_to root_path, class: "navbar__right--link navbar__right--signin" do %>
+                        <%= inline_svg_tag "user.svg", class: "navbar__right--icon", left: true %>
+                        <span>Log In</span>
+                <% end %>
+            <% end %>                           
+        </div>   
     </nav>
     <!-- end of main navbar  -->    
     <%# Side Navigation %>
@@ -144,7 +143,17 @@
                             <%= inline_svg_tag "home3.svg", class: "sidebar__list--nav__icon", left: true %>
                             <span>Property</span>
                         <% end %>  
-                </li>           
+                </li>
+                <% if (agent_signed_in?)%>
+    
+                    <li class="sidebar__list--nav__item">
+                        <%= link_to "Sign out", destroy_agent_session_path, method: :delete, class: "dropdown-item" %>
+                        <%= link_to  "Log out", destroy_agent_session_path, method: :delete, class: "sidebar__list--nav__link" %>
+                        <%#= link_to destroy_agent_session_path, method: :delete, class: 'sidebar__list--nav__link' do %>
+                        <%#= fa_icon "envelope ", text: " Log Out", left: true %>
+                        <%# end %>
+                    </li>
+                <% end %>          
             </ul>
 
             <div class="sidebar__list--copyright">
@@ -154,4 +163,5 @@
     </nav>
     <!-- end of navigation -->
 </section>
-    
+<%#= render "devise/sessions/form" %>
+<!-- Modal Box end  -->   

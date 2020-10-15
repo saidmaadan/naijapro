@@ -1,20 +1,24 @@
-<section class="home">
-    <h1>Welcome to naijaproperty</h1>
+<div class="homes">
+    <div class="home">
+        <div class="home__content">
+            <h1 class=" home__content--heading title has-text-white">
+                Find your dream home you'll love to live
 
-<p>Our Story
-
-“In 2009, I started helping people buy homes the traditional way. As a real estate agent, I kept running into the same problem: buyers couldn’t make an offer on the home they wanted until they sold their existing home first. They needed their home equity to qualify for a new mortgage. They were stressed they would lose their dream home because their offer was contingent on the sale of their old home, or they would have to go through the headache of moving twice if their old home sold before they found their new one.”
-
-“Buying a new home should be fun and exciting, but the broken process made my home buyers anxious. They felt rushed to make decisions and didn’t always end up with the best outcome.”
-
-“After 10 years of seeing this over and over, I decided to take action on behalf of these frustrated buyers and completely redesign the home buying process to make it easier, calmer, and more certain.”
-Tim Heyl
-CEO and Founder of Homeward
-The Homeward Way
-
-The Homeward Way lets you to take your time, find your ideal home, and make a competitive all-cash offer - all before you list and sell your current home.
-
-Our new approach is gaining popularity, and helping us grow quickly and serve customers across multiple states. It’s time to ditch the old way of buying a home for a more relaxing, enjoyable home buying experience.
-
-Come join us in this journey to make your own home buying experience the fun and meaningful life milestone it deserves to be.</p>
-</section>
+            </h1>
+            <div class="home__content--search">
+                <%= form_tag root_path, method: :get, class: "field has-addons" do %>
+                    <div class="control has-icons-left">
+                        <span class="icon is-small is-left">
+                            <i class="fa fa-search"></i>
+                        </span>
+                        <%= text_field_tag 'q', '', class: "input", placeholder: "Try 'logo design" %>
+                    </div>
+                    <div class="control">
+                        <button class="button is-primary" type="submit">Search</button>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+        
+    </div>
+</div>

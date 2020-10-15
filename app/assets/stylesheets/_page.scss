@@ -1,6 +1,40 @@
-// Place all the styles related to the Pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-.home{
-   grid-column: center-start/center-end; 
+@import "base";
+
+.homes {
+   grid-column: main-start / main-end;
+   display: grid;
+   grid-template-columns: [home-full-start] minmax(6rem, 1fr) [home-center-start] repeat(8, [home-col-start] minmax(min-content, 14rem) [home-col-end]) [home-center-end] minmax(6rem, 1fr) [home-full-end];
+   grid-gap: 7rem;
 }
+
+.home{
+   grid-column: home-full-start/home-full-end;
+   height: 50rem;
+   width: 100%;
+   background: linear-gradient(rgba($color-primary, .20), rgba($color-primary, .20)), url('/assets/np1.jpg') center center;
+   background-size: cover;
+   background-position: center;
+   object-fit: cover;
+   display: grid;
+   grid-template-columns: 1fr;
+   align-items: center;
+
+   &__content{
+      grid-column: 1/-1;
+      padding: 4rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-self: center;
+      // justify-content: center;
+      // align-items: center;
+
+      &--heading{
+         font-size: 5rem;
+         font-weight: 900;
+      }
+   }
+
+
+}
+
+

@@ -1,0 +1,15 @@
+<%= form_for(:agent, class: "signup-form", :url => registration_path(:agent)) do |f| %>
+    <h3 class="form-heading">Sign Up</h3>
+    <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="fullname-imputs-wrapper">
+        <%= f.text_field :fullname, autofocus: true, autocomplete: "full_name", placeholder: "Full name" %>
+        <%= f.text_field :username, autofocus: true, autocomplete: "username", placeholder: "Username" %>
+    </div>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-input", placeholder: "Enter your email" %>
+    <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %>
+    <%= f.password_field :password, autocomplete: "new-password", class: "form-input", placeholder: "Password" %>
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-input", placeholder: "Password" %>
+    <%= f.submit "Sign up", class: "form-btn" %>
+<% end %>
