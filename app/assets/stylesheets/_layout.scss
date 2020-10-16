@@ -24,7 +24,7 @@ footer{
     display: grid;
     grid-template-rows: min-content min-content min-content;
     grid-template-columns: [footer-start] minmax(6rem, 1fr) [footer-center-start] repeat(8, [footer-col-start] minmax(min-content, 14rem) [footer-col-end]) [footer-center-end] minmax(6rem, 1fr) [footer-end]; 
-    background: linear-gradient(rgba($color-primary-2, .90), rgba($color-primary-2, .92)), url('/assets/np_footer.jpg') center center;
+    background: linear-gradient(rgba($color-primary-2, .90), rgba($color-primary-2, .92)), url('https://9japroperty.s3.amazonaws.com/images/np_footer.jpg') center center;
     background-size: cover;
     background-position: center;
     object-fit: cover;
@@ -72,6 +72,7 @@ footer{
         }
 
         @media only screen and (max-device-width: 480px) {
+            grid-template-columns: 1fr;
             // grid-column: 1/-1;
             // text-align: center;
             // font-size: 3rem;
@@ -87,12 +88,19 @@ footer{
         &--about{
             grid-column: 1/5;
             margin-right: 6rem;
+            display: grid;
             @media only screen and (max-width: $bp-large) {
                 grid-column: 1/5;
             }
             @media only screen and (max-width: $bp-medium) {
                 grid-column: 1/-1;
                 margin-right: 0;
+            }
+            @media only screen and (max-device-width: 480px) {
+                
+                grid-column: 1/-1;
+                font-size: 3rem;
+                justify-items: center;
             }
             
         }
@@ -112,13 +120,24 @@ footer{
                 // grid-template-columns: repeat(2, 1fr);
                 // margin: 0;
             }
+            @media only screen and (max-device-width: 480px) {   
+                grid-column: 1/-1;
+                font-size: 3rem;
+                
+            }
             &_left{
                 justify-self: start;
             }
 
             &_right{
-                // display: grid;
                 justify-self: end;
+            }
+            &_right,
+            &_left{
+                @media only screen and (max-device-width: 480px) {
+                    display: grid;
+                    justify-self: center;
+                }
             }
             
         }
@@ -135,7 +154,9 @@ footer{
         bottom: 0;
         padding-top: 3rem;
         text-align: center;
-        background-color: $color-white;
+        border-top: 1px solid $color-grey;
+        background: linear-gradient(rgba($color-white, .40), rgba($color-white, .44));
+        // background-color: $color-white;
 
         &--link{
             &:link,
@@ -148,6 +169,11 @@ footer{
 
         }
 
+        @media only screen and (max-device-width: 480px) {   
+            font-size: 3.5rem;
+            // text-align: center;
+            // font-size: 3rem;
+        }
 
     }
     
