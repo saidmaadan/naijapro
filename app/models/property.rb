@@ -1,5 +1,5 @@
 class Property < ApplicationRecord
 
-    belong_to :property_type
-    belong_to :category
+    belongs_to :property_type
+    belongs_to :category
 end
