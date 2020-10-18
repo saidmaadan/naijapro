@@ -19,12 +19,13 @@
 footer{
     grid-column: full-start/full-end;
     grid-row: 3/-1;
-    margin-top: 5rem;
+    // margin-top: 5rem;
     bottom: 0;
     display: grid;
     grid-template-rows: min-content min-content min-content;
-    grid-template-columns: [footer-start] minmax(6rem, 1fr) [footer-center-start] repeat(8, [footer-col-start] minmax(min-content, 14rem) [footer-col-end]) [footer-center-end] minmax(6rem, 1fr) [footer-end]; 
-    background: linear-gradient(rgba($color-primary-2, .90), rgba($color-primary-2, .92)), url('https://9japroperty.s3.amazonaws.com/images/np_footer.jpg') center center;
+    grid-template-columns: [footer-start] minmax(6rem, 1fr) [footer-center-start] repeat(8, [footer-col-start] minmax(min-content, 14rem) [footer-col-end]) [footer-center-end] minmax(6rem, 1fr) [footer-end];
+    background: linear-gradient(rgba($color-primary-2, .90), rgba($color-primary-2, .92)), url('https://9japroperty.s3.amazonaws.com/images/np_footer.svg') center center;
+    // background: linear-gradient(rgba($color-primary-2, .90), rgba($color-primary-2, .92)), url('https://9japroperty.s3.amazonaws.com/images/np_footer.jpg') center center;
     background-size: cover;
     background-position: center;
     object-fit: cover;

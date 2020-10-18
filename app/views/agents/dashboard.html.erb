@@ -1,4 +1,43 @@
 <div class="dashboard">
-    <h1>wellcome <%= current_agent.fullname%> to ypur profile page</>
+    <div class="dashboard__sidebar">
+        <div class="dashboard__sidebar--img">
+            <figure class="image is-128x128">
+                <%= image_tag avatar_url(current_agent), class: "is-rounded" %>
+            </figure>
+        </div>
+        <div class="content has-text-centered">
+            <p class="title-is-5"><%= current_agent.fullname %></p>
+            <%= form_for :agent, url: agents_edit_url(@agent), action: :update, method: :post do |f| %>
+                <div class="file">
+                    <label for="" class="button is-primary is-outlined is-fullwidth">
+                        <%= f.file_field :avatar, class: 'file-input', onchange: "this.form.submit();" %>
+                        <i class="fas fa-upload">&nbsp;&nbsp;&nbsp; Upload Avatar</i>
+                    </label>
+                </div>
+            <% end %>
+        </div>
+        <p><%#= current_agent.fullname%> </p>
+    </div>
+    <div class="dashboard__main">
+        <div class="column is-one-third has-text-centered">
+            <%= link_to new_property_path do %>
+                <div class="card">
+
+                    <div class="card-image card-content is-horizontal-center is-flex ">
+                        <figure class="image is-128x128 ">
+                        <%= inline_svg_tag "icon_add_g2.svg", class: "dashboard__main--icon", center: true %>
+                            <%#= image_tag 'icon_add-g.png' %>
+                        </figure>
+                    </div>
+
+                    <div class="card-content">
+                        <strong>Add a Property</strong>
+                    </div>    
+
+                </div>
+            <% end %>
+        </div>
+    </div>
+    
 </div>
 
