@@ -49,11 +49,12 @@ $bp-largest: 75em;   // 1200px
 $bp-large: 62.5em;   // 1000px
 $bp-medium: 50em;    // 800px;
 $bp-small: 37.5em;    // 600px;
-$bp-smaller: 31.25em; // 500px
-$bp-smallest: 30.25em; // 480px
+$bp-smaller: 31.25em; // 500px;
+$bp-smallest: 30em; // 480px; 480/16;
 
 // FONT
 $default-font-size: 1.6rem;
+$mobile-font-size: 4rem;
 
 *,
 *::before,
@@ -98,8 +99,7 @@ body {
     //     grid-template-rows: 6rem calc(100vh - 6rem);
     }
     @media only screen and (max-device-width: 480px) {
-        grid-template-rows: 6rem min-content min-content;
-        font-size: 3rem;
+        font-size: $mobile-font-size;
         font-weight: 300;
     }
 }
