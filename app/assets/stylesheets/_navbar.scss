@@ -71,17 +71,17 @@
                 }
 
                 .line {
-                    // height: .2rem;
-                    // width: 2.5rem;
-                    height: 3.2px;
-                    width: 40px;
+                    height: .2rem;
+                    width: 2.5rem;
+                    // height: 3.2px;
+                    // width: 40px;
                     background-color: $color-black;
                     margin-bottom: .6rem;
                 }
             
                 .line-1, .line-3 {
-                    // width: 1.8rem;
-                    width: 28.8px;
+                    width: 1.8rem;
+                    // width: 28.8px;
                     transition: all .4s;
                 }
                 .line-2{
@@ -89,8 +89,8 @@
                 }
 
                 &:hover .line {
-                    // width: 2.5rem;
-                    width: 40px;
+                    width: 2.5rem;
+                    // width: 40px;
                     background-color: $color-primary;
                 }
                 
@@ -392,8 +392,8 @@
                     // }
 
                     @media only screen and (max-device-width: $bp-smallest) {
-                        width: 28px;
-                        height: 28px;
+                        // width: 28px;
+                        // height: 28px;
                     
                     }
                 }
