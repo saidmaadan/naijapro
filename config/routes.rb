@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   devise_for  :agents, 
               path: '', 
               path_names: {sign_up: 'signup', sign_in: 'login', sign_out: 'logout', edit: 'update'},
-              controllers: {registrations: 'registrations'} 
+              controllers: {omniauth_callbacks: 'omniauth_callbacks', registrations: 'registrations'} 
 
   get '/dashboard', to: 'agents#dashboard'
   

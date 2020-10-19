@@ -35,6 +35,10 @@ gem 'kaminari', '~> 1.2', '>= 1.2.1'
 gem 'inline_svg', '~> 1.7', '>= 1.7.1'
 gem 'aws-sdk-s3', '~> 1.81', require: false
 #gem 'aws-sdk-s3', '~> 1.67', require: false
+gem 'omniauth', '~> 1.9', '>= 1.9.1'
+gem 'omniauth-facebook', '~> 7.0'
+gem 'omniauth-google-oauth2'
+
 
 gem 'trestle', '~> 0.9.3'
 gem 'trestle-tinymce', '~> 0.3.0'

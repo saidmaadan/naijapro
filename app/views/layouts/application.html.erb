@@ -11,14 +11,11 @@
   </head>
 
   <body >
-    <%#= render "shared/signin" %>
-    
-    <%#= render "devise/sessions/form" %>
     <div class="ms-container">
-      <%#= render "agents/sessions_or_registrations/form" %>
       <%= render  "shared/navbar" %>
-      <%= render 'shared/notifications' %>
+      
       <div class="main">
+        <%= render 'shared/notifications' %>
         <%= yield %>
       </div>
       <%= render  "shared/footer" %>

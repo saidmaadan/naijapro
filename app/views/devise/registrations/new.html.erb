@@ -11,8 +11,13 @@
               <%= render "devise/shared/error_messages", resource: resource %>
               
               <div class="field">
-                <%= f.label :fullname, class: "label" %>
-                <%= f.text_field :fullname, autofocus: true, autocomplete: "full_name", class: "input" %>
+                <%= f.label 'FirstName', class: "label" %>
+                <%= f.text_field :fullname, autofocus: true, autocomplete: "fullname", class: "input" %>
+              </div>
+
+              <div class="field">
+                <%= f.label :lastname, class: "label" %>
+                <%= f.text_field :lastname, autofocus: true, autocomplete: "lastname", class: "input" %>
               </div>
 
               <div class="field">
@@ -42,7 +47,7 @@
                 <%= f.submit "Sign up", class: "button is-danger is-fullwidth m-b-10" %>
               </div>
             <% end %>
-
+            <%= link_to "Register with Facebook", agent_facebook_omniauth_authorize_path, class: "button is-primary is-fullwidth" %>
             <%= render "devise/shared/links" %>
           </div>
         </div>
