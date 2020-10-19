@@ -79,6 +79,7 @@ html {
     @media only screen and (max-device-width: $bp-smallest) {
         //font-size: $mobile-font-size;
         font-size: 80%;
+        
         a, div, p{
             font-size: 3.5rem;
         }
