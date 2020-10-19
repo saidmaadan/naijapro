@@ -100,7 +100,8 @@ footer{
             @media only screen and (max-device-width: $bp-smallest) {
                 
                 grid-column: 1/-1;
-                // font-size: 3rem;
+                font-size: 3rem;
+                display: grid;
                 justify-items: center;
             }
             
@@ -123,7 +124,7 @@ footer{
             }
             @media only screen and (max-device-width: $bp-smallest) {   
                 grid-column: 1/-1;
-                // font-size: 3rem;
+                font-size: 3rem;
                 
             }
             &_left{

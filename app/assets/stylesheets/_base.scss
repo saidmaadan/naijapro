@@ -55,7 +55,7 @@ $bp-smallest: 30em; // 480px; 480/16;
 
 // FONT
 $default-font-size: 1.6rem;
-$mobile-font-size: 4rem;
+$mobile-font-size: 1em;
 
 *,
 *::before,
@@ -73,11 +73,11 @@ html {
     //     font-size: 50%;
     // }
 
-    @media only screen and (max-width: $bp-smallest) {
-        font-size: 65%;
-    }
+    // @media only screen and (max-width: $bp-smallest) {
+    //     font-size: 65%;
+    // }
     @media only screen and (max-device-width: $bp-smallest) {
-        font-size: 120%;
+        font-size: $mobile-font-size;
     }
 }
 
