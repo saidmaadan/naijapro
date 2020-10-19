@@ -152,7 +152,6 @@
                 <% if (agent_signed_in?)%>
     
                     <li class="sidebar__list--nav__item">
-                        <%= link_to "Sign out", destroy_agent_session_path, method: :delete, class: "dropdown-item" %>
                         <%= link_to  "Log out", destroy_agent_session_path, method: :delete, class: "sidebar__list--nav__link" %>
                         <%#= link_to destroy_agent_session_path, method: :delete, class: 'sidebar__list--nav__link' do %>
                         <%#= fa_icon "envelope ", text: " Log Out", left: true %>

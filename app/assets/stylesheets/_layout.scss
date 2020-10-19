@@ -100,7 +100,7 @@ footer{
             @media only screen and (max-device-width: $bp-smallest) {
                 
                 grid-column: 1/-1;
-                font-size: 3rem;
+                // font-size: 3rem;
                 display: grid;
                 justify-items: center;
             }
@@ -124,7 +124,7 @@ footer{
             }
             @media only screen and (max-device-width: $bp-smallest) {   
                 grid-column: 1/-1;
-                font-size: 3rem;
+                // font-size: 3rem;
                 
             }
             &_left{
@@ -245,6 +245,12 @@ footer{
     -moz-transition: all .2s;
     -ms-transition: all .2s;
     -o-transition: all .2s;
+
+    @media only screen and (max-device-width: $bp-smallest) {
+        font-size: 3.5rem;
+        padding-right: 8px;
+    
+    }
 }
 
 .social-icon:hover{

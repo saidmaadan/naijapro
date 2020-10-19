@@ -6,6 +6,11 @@
     display: grid;
     grid-template-columns: 40rem repeat(3, fr);
 
+    @media only screen and (max-device-width: $bp-smallest) {
+        grid-template-columns: 50rem repeat(3, fr);
+    
+    }
+
     .navbar{
         grid-column: 1/-1;
         height: 5rem;
@@ -14,13 +19,14 @@
         font-size: 1.5rem;
         background-color: #fff;
         border-bottom: 2px solid $color-grey;
-        
+
         display: flex;
         justify-content: space-between;
         align-items: center;
         @media only screen and (max-device-width: $bp-smallest) {
-            height: 80px;
-            font-size: 24px;
+            height: 10rem;
+            font-size: 3rem;
+            
         
         }
 
@@ -72,26 +78,42 @@
 
                 .line {
                     height: .2rem;
-                    width: 2.5rem;
+                    width: 3.5rem;
                     // height: 3.2px;
                     // width: 40px;
                     background-color: $color-black;
                     margin-bottom: .6rem;
+
+                    @media only screen and (max-device-width: $bp-smallest) {
+                        width: 5.5rem;
+                        margin-bottom: 1.2rem;
+                    
+                    }
                 }
             
                 .line-1, .line-3 {
-                    width: 1.8rem;
+                    width: 2.8rem;
                     // width: 28.8px;
                     transition: all .4s;
+
+                    @media only screen and (max-device-width: $bp-smallest) {
+                        width: 4.3rem;
+                    
+                    }
                 }
                 .line-2{
                     background-color: $color-secondary;
                 }
 
                 &:hover .line {
-                    width: 2.5rem;
+                    width: 3.5rem;
                     // width: 40px;
                     background-color: $color-primary;
+
+                    @media only screen and (max-device-width: $bp-smallest) {
+                        width: 5.5rem;
+                    
+                    }
                 }
                 
             }
@@ -240,7 +262,8 @@
         }
 
         @media only screen and (max-device-width: $bp-smallest) {
-            font-size: 24px;
+            font-size: 3rem;
+            left: -50rem;
         
         }
 
@@ -255,6 +278,10 @@
             height: 5rem;
             background-color: $color-white;
             border-bottom: 2px solid $color-grey;
+            @media only screen and (max-device-width: $bp-smallest) {
+                height: 10rem;
+            
+            }
 
             & > * {
                 padding: 0 1rem;
@@ -276,6 +303,11 @@
             height: 5rem;
             background-color: $color-white;
             // border-bottom: 1px solid $color-grey;
+            
+            @media only screen and (max-device-width: $bp-smallest) {
+                height: 10rem;
+            
+            }
 
             & > * {
                 padding: 0 1rem;
@@ -365,7 +397,8 @@
         
                     display: flex;
                     align-items: center;
-        
+                    
+                    
                     // @media only screen and (max-width: $bp-medium) {
                     //     justify-content: center;
                     //     padding: 2rem;
@@ -375,6 +408,8 @@
                     //     flex-direction: column;
                     //     padding: 1.5rem .5rem;
                     // }
+
+
                 }
         
                 &__icon {
@@ -392,8 +427,8 @@
                     // }
 
                     @media only screen and (max-device-width: $bp-smallest) {
-                        // width: 28px;
-                        // height: 28px;
+                        width: 2.75rem;
+                        height: 2.75rem;
                     
                     }
                 }
