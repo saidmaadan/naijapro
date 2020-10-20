@@ -24,7 +24,10 @@
             <% if (agent_signed_in?)%>
                 <%= link_to  "Log out", destroy_agent_session_path, method: :delete, class: "navbar__right--link navbar__hidden" %>
                 <%= link_to dashboard_path, class: "navbar__right--link navbar__right--signin" do %>
-                        <%= inline_svg_tag "user.svg", class: "navbar__right--icon", left: true %>
+                        <%#= inline_svg_tag "user.svg", class: "navbar__right--icon", left: true %>
+                        <figure class="image is-24x24 m-r-5 avatar">
+                            <%= image_tag avatar_url(current_agent), class: "is-rounded" %>
+                        </figure>
                         <span><%= current_agent.fullname %></span>
                 <% end %>
             <% else %>

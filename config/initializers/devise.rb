@@ -266,9 +266,9 @@ Devise.setup do |config|
   # config.navigational_formats = ['*/*', :html]
 
   # The default HTTP method used to sign out a resource. Default is :delete.
-  #config.sign_out_via = :delete
-  config.sign_out_via = :get
-  config.authentication_keys = [ :login ]
+  config.sign_out_via = :delete
+  # config.sign_out_via = :get
+  # config.authentication_keys = [ :login ]
 
   # ==> OmniAuth
   # Add a new OmniAuth provider. Check the wiki for more information on setting
@@ -310,12 +310,29 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
-  config.omniauth :facebook, Rails.application.credentials.facebook[:APP_ID], Rails.application.credentials.facebook[:APP_SECRET], 
-                   scope: 'email', 
-                   info_fields: 'email,name',
-                   image_size: 'large',
-                   token_params: { parse: :json }
+  # config.omniauth :facebook, Rails.application.credentials.facebook[:APP_ID], Rails.application.credentials.facebook[:APP_SECRET],
+  # config.omniauth :facebook, Rails.application.credentials.dig(:facebook, :APP_ID), Rails.application.credentials.dig(:google_oauth2, :APP_SECRET),
+  #                 scope: 'email', 
+  #                 info_fields: 'email,name,username',
+  #                 image_size: 'large'
+                  #  token_params: { parse: :json }
 
-config.omniauth :google_oauth2, Rails.application.credentials.google[:CLIENT_ID], Rails.application.credentials.facebook[:CLIENT_SECRET],                 
-                scope: 'userinfo.email,userinfo.profile'
+  # config.omniauth :google_oauth2, Rails.application.credentials.dig(:google_oauth2, :CLIENT_ID), Rails.application.credentials.dig(:google_oauth2, :CLIENT_SECRET),
+  # # config.omniauth :google_oauth2, Rails.application.credentials.google_oauth2[:CLIENT_ID], Rails.application.credentials.google_oauth2[:CLIENT_SECRET],                 
+  #                  scope: 'userinfo.email,userinfo.profile'
+
+  
+  config.omniauth :google_oauth2, Rails.application.credentials[Rails.env.to_sym][:google_oauth2][:CLIENT_ID], Rails.application.credentials[Rails.env.to_sym][:google_oauth2][:CLIENT_SECRET],
+  # config.omniauth :google_oauth2, Rails.application.credentials.google_oauth2[:CLIENT_ID], Rails.application.credentials.google_oauth2[:CLIENT_SECRET],                 
+                   scope: 'userinfo.email,userinfo.profile'
+
+  config.omniauth :facebook, Rails.application.credentials[Rails.env.to_sym][:facebook][:APP_ID], Rails.application.credentials[Rails.env.to_sym][:facebook][:APP_SECRET],
+                   scope: 'email', 
+                   info_fields: 'email,name,username',
+                   image_size: 'large'
 end
+
+#config.omniauth :google_oauth2, Rails.application.credentials.google_oauth2[:CLIENT_ID], Rails.application.credentials.google_oauth2[:CLIENT_SECRET],                 
+                  #  scope: 'email'
+
+#config.omniauth :facebook, Rails.application.credentials.facebook[:APP_ID], Rails.application.credentials.facebook[:APP_SECRET], 
