@@ -1,0 +1,12 @@
+@import "base";
+
+.property{
+    grid-column: main-start/main-end;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content;
+
+    &__new{
+        grid-column: 1/-1;
+    }
+}

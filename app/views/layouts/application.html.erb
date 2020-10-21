@@ -8,20 +8,19 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%#= favicon_link_tag asset_path('favicon.ico') %>
+    <%#= filestack_js_include_tag %>
+    <%#= filestack_js_init_tag %>
   </head>
 
   <body>
   
     <div class="ms-container">
+      <%= render 'shared/notifications' %>
       <%= render  "shared/navbar" %>
-      
-      <div class="main">
-        <%= render 'shared/notifications' %>
+      <div class="main"> 
         <%= yield %>
       </div>
       <%= render  "shared/footer" %>
     </div>
-
-    
   </body>
 </html>

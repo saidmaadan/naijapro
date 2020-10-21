@@ -41,6 +41,7 @@ gem 'omniauth-facebook', '~> 7.0'
 # gem 'omniauth-facebook', '= 5.0.0'
 gem 'omniauth-google-oauth2'
 
+gem 'filestack-rails', require: 'filestack-rails'
 
 gem 'trestle', '~> 0.9.3'
 gem 'trestle-tinymce', '~> 0.3.0'

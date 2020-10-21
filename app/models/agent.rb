@@ -4,6 +4,7 @@ class Agent < ApplicationRecord
   # attr_writer :login
   # before_save :set_slug
   has_one_attached :avatar
+  has_many :properties
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,

@@ -1,18 +1,16 @@
 
 
 //COLORS
-$color-primary: #77b800;
-$color-primary-lighter: #e4ebd7;
-$color-primary-darker: #669b05;
-$color-primary-dark: hsl(81, 100%, 36%);
-$color-primary-light: #e0f0c4;
-$color-primary-2: #f6f7f4;
-$color-primary-3: #ebf0e3;
 
+$color-primary: #55c57a;
+$color-primary-light: #7ed56f;
+$color-primary-lighter:  #e7f1e5;
+$color-primary-dark: #28b485;
+$color-primary-2: #e8eeec;
+$color-primary-3: #cfe9e0;
 
-$color-secondary: #04b98c;
-$color-secondary-dark: #44502e;
-$color-secondary-light: #baddc3;
+$color-secondary-light: #ffb900;
+$color-secondary-dark: #ff7730;
 
 $color-red: #f93838;
 $color-red-dark: #a30808;
@@ -22,16 +20,49 @@ $color-orange-dark: #bb5914;
 $color-orange-light: hsl(31, 100%, 67%);
 
 $color-grey: rgb(224, 220, 220);
-$color-grey-dark: #999;
-$color-grey-darker: #333;
-$color-grey-dark-2: #777;
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
 
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+
+$color-white: #fff;
 $color-black: #000;
 $color-black-2: #323232;
 $color-black-light: #6d6d6d;
 
+// $color-primary: #77b800;
+// $color-primary-lighter: #e4ebd7;
+// $color-primary-darker: #669b05;
+// $color-primary-dark: hsl(81, 100%, 36%);
+// $color-primary-light: #e0f0c4;
+// $color-primary-2: #f6f7f4;
+// $color-primary-3: #ebf0e3;
 
-$color-white: #fff;
+
+// $color-secondary: #04b98c;
+// $color-secondary-dark: #44502e;
+// $color-secondary-light: #baddc3;
+
+// $color-red: #f93838;
+// $color-red-dark: #a30808;
+// $color-red-darker: hsl(21, 100%, 36%);
+// $color-orange: #ec7e31;
+// $color-orange-dark: #bb5914;
+// $color-orange-light: hsl(31, 100%, 67%);
+
+// $color-grey: rgb(224, 220, 220);
+// $color-grey-dark: #999;
+// $color-grey-darker: #333;
+// $color-grey-dark-2: #777;
+
+// $color-black: #000;
+// $color-black-2: #323232;
+// $color-black-light: #6d6d6d;
+
+
+// $color-white: #fff;
 
 // BULMA CUSTOMIZED
 $my-primary: $color-primary;
